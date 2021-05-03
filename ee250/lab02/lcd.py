@@ -2,7 +2,7 @@ from grove_rgb_lcd import *
 import time
 
 
-distance = input(Enter a suitable distance: )
+distance = int(input("Enter a suitable distance: "))
 threshold = 100
 
 if distance < threshold:
