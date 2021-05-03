@@ -6,10 +6,10 @@ distance = int(input("Enter a suitable distance: "))
 threshold = 100
 
 if distance < threshold:
-    setText_norefresh(threshold + " " + "OBJ PRES\n" + "    "+ distance)
+    setText_norefresh(str(threshold) + " " + "OBJ PRES\n" + "    "+ str(distance))
     setRGB(255,0,0)
 else:
-    setText_norefresh(threshold + "           \n " +  distance)
+    setText_norefresh(str(threshold) + "           \n " + str(distance))
     setRGB(0,255,0)
 
 
