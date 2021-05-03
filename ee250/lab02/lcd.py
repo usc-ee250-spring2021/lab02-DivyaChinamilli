@@ -10,3 +10,5 @@ for c in range(0,255):
 
 setRGB(0,255,0)
 setText("Bye bye, this should wrap")
+
+quit()
