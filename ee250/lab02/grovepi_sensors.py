@@ -42,8 +42,9 @@ if __name__ == '__main__':
         print(grovepi.ultrasonicRead(PORT))
         print(grovepi.analogRead(THRESHOLD))
 
+        distance = grovepi.ultrasonicRead(PORT)
         threshold_value = grovepi.analogRead(THRESHOLD)
-        distance = grove.ultrasonicRead(PORT)
+        
 
         if distance < threshold_value:
             setText_norefresh(str(threshold_value) + " " + "OBJ PRES\n" +  str(distance))
