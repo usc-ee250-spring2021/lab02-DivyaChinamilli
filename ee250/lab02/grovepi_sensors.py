@@ -46,11 +46,12 @@ if __name__ == '__main__':
         threshold_value = grovepi.analogRead(THRESHOLD)
         
 
-        if distance < threshold_value:
-            setText_norefresh(str(threshold_value) + " " + "OBJ PRES\n" +  str(distance))
-            setRGB(255,0,0)
-        else:
+        if distance > threshold_value:
             setText_norefresh(str(threshold_value) + "\n " + str(distance))
             setRGB(0,255,0)
+        else:
+            setText_norefresh(str(threshold_value) + " " + "OBJ PRES\n" +  str(distance))
+            setRGB(255,0,0)
+        
 
         time.sleep(0.2)
