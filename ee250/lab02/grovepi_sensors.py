@@ -32,6 +32,7 @@ if __name__ == '__main__':
 
     PORT = 4    # D4
     THRESHOLD = 0 # A0
+    
 
     while True:
         #So we do not poll the sensors too quickly which may introduce noise,
@@ -40,3 +41,15 @@ if __name__ == '__main__':
 
         print(grovepi.ultrasonicRead(PORT))
         print(grovepi.analogRead(THRESHOLD))
+
+        threshold_value = grovepi.analogRead(THRESHOLD)
+        distance = grove.ultrasonicRead(PORT)
+
+        if distance < threshold_value:
+            setText_norefresh(str(threshold_value) + " " + "OBJ PRES\n" +  str(distance))
+            setRGB(255,0,0)
+        else:
+            setText_norefresh(str(threshold_value) + "\n " + str(distance))
+            setRGB(0,255,0)
+
+        time.sleep(0.2)
