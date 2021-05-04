@@ -32,8 +32,8 @@ if __name__ == '__main__':
     PORT = 4    # D4
 
     while True:
-        So we do not poll the sensors too quickly which may introduce noise,
-        sleep for a reasonable time of 200ms between each iteration.
+        #So we do not poll the sensors too quickly which may introduce noise,
+        #sleep for a reasonable time of 200ms between each iteration.
         time.sleep(0.2)
 
         print(grovepi.ultrasonicRead(PORT)
