@@ -47,10 +47,10 @@ if __name__ == '__main__':
         
 
         if distance > threshold_value:
-            setText_norefresh(str(threshold_value) + "\n " + str(distance))
+            setText_norefresh(str(threshold_value) + "cm\n " + str(distance)+ "cm")
             setRGB(0,255,0)
         else:
-            setText_norefresh(str(threshold_value) + " " + "OBJ PRES\n" +  str(distance))
+            setText_norefresh(str(threshold_value) + "cm " + "OBJ PRES\n" +  str(distance)+ "cm")
             setRGB(255,0,0)
         
 
